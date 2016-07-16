@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Psycgic Game</title>
+<body>
+    <div class="container">
+        <div id="userGuess">You guess: </div>
+        <div id="timesUserWins">Win: 0</div>
+        <div id="timesUserLooses">Loss: 0</div>
+        <div id="guessesLeft">Guesses left: 10</div>
+        <div id="guessesUsed">Guesses so far: </div>
+<script>
+var numWins = 0;
+var numLooses = 0;
+var guessLeft = 10;
+var guessUsed = [];
+var myletter = ["D", "E", "L"];
+var randltr = myletter [Math.floor(Math.random ()* myletter.length)];
+// document.getElementByID("userGuess").windo(){
+// 	document.getElementByID("userGuess").innerHTML = "You guess" + userGuess;
+// };
+
+window.onkeypress = function(event){
+	var usersGuess = String.fromCharCode(event.keyCode).toUpperCase();
+    guessUsed.push(usersGuess);
+    console.log(randltr);
+    if (usersGuess == randltr){
+    	numWins ++;
+    	guessLeft =10;
+    	alert("you won the correct letter was:" + randltr);
+    	document.getElementById("timesUserWins").innerHTML = "Win: " + numWins;
+    	restart();
+
+    	
+	}else{
+
+		if (guessLeft == 0) {
+			alert("You lost");
+			numLooses ++;
+			guessLeft = 10;
+			document.getElementById("timesUserLooses").innerHTML = "Loss : " + numLooses;
+			restart();
+		} else {
+			alert("Opps try again");
+			document.getElementById("userGuess").innerHTML = "You guess: " + usersGuess;
+			guessLeft --;
+			document.getElementById("guessesLeft").innerHTML = "Guesses left: " + guessLeft;
+			document.getElementById("guessesUsed").innerHTML = "Guesses so far : " + guessUsed.join(" ");
+		}
+	}
+
+} 
+function restart(){
+	document.getElementById("guessesUsed").innerHTML = "Guesses so far : " ;
+	document.getElementById("userGuess").innerHTML = "You guess: " ;
+	document.getElementById("guessesLeft").innerHTML = "Guesses left: 10 " ;
+
+}
+</script>
+</body>
+</html>
