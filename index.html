@@ -1,62 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Psychic Game</title>
+	<meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Psychic Game</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/	bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+</head>
 <body>
     <div class="container">
+    <div class="jumbotron">
+  <h1>Psychic Game</h1>
+  <p>Can you guess my letter?</p>
         <div id="userGuess">You guess: </div>
         <div id="timesUserWins">Win: 0</div>
         <div id="timesUserLooses">Loss: 0</div>
         <div id="guessesLeft">Guesses left: 10</div>
         <div id="guessesUsed">Guesses so far: </div>
-<script>
-var numWins = 0;
-var numLooses = 0;
-var guessLeft = 10;
-var guessUsed = [];
-var myletter = ["D", "E", "L"];
-var randltr = myletter [Math.floor(Math.random ()* myletter.length)];
+        </div>
+    </div>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
 
-window.onkeypress = function(event){
-	var usersGuess = String.fromCharCode(event.keyCode).toUpperCase();
-    guessUsed.push(usersGuess);
-    console.log(randltr);
-    if (usersGuess == randltr){
-    	numWins ++;
-    	alert("you won the correct letter was:" + randltr);
-    	document.getElementById("timesUserWins").innerHTML = "Win: " + numWins;   	
-    	restart();
-
-    	
-	}else{
-
-		if (guessLeft == 0) {
-			alert("You lost");
-			numLooses ++;
-			document.getElementById("timesUserLooses").innerHTML = "Loss : " + numLooses;
-			restart();
-
-
-		} else {
-			alert("Opps try again");
-			document.getElementById("userGuess").innerHTML = "You guess: " + usersGuess;
-			guessLeft --;
-			document.getElementById("guessesLeft").innerHTML = "Guesses left: " + guessLeft;
-			document.getElementById("guessesUsed").innerHTML = "Guesses so far : " + guessUsed.join(" ");
-		}
-	}
-
-} 
-function restart(){
-	document.getElementById("guessesUsed").innerHTML = "Guesses so far : " ;
-	document.getElementById("userGuess").innerHTML = "You guess: " ;
-	document.getElementById("guessesLeft").innerHTML = "Guesses left: 10 " ;
-	randltr = myletter [Math.floor(Math.random ()* myletter.length)];
-	guessUsed = [];
-	guessLeft = 10;
-}
-</script>
 </body>
 </html>
 

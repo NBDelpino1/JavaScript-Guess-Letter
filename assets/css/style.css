@@ -1,0 +1,28 @@
+
+.container .jumbotron, .container-fluid .jumbotron{
+	background-color: #286090;
+	margin: 15px;
+	border: 2px;
+	padding: 15px;
+	border-style: solid;
+	border-color: black;
+	height: 760px;
+	
+}
+#userGuess,#timesUserWins,#timesUserLooses,#guessesLeft,#guessesUsed{
+	margin: 15px;
+	border: 2px;
+	padding: 15px;
+	border-style: solid;
+	border-color: black;
+	height: 50px;
+	font-size: 20px;
+	background-color: #F3E1DE;	
+}
+
+#timesUserWins{
+	color: #155f15;
+}
+#timesUserLooses{
+	color: #b92323;
+}
