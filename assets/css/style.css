@@ -22,7 +22,7 @@ h1 {
 	letter-spacing: 2px;
 }
 
-h2 {
+h3 {
 	font-family: 'Orbitron', sans-serif;
 	letter-spacing: 2px;
 	color: #ffffff;
@@ -33,9 +33,10 @@ p {
 	color: #ffffff;
 	font-weight: 100;
 	font-style: italic;
+	font-size:12px;
 }
 
-.accent-color {
+.yellow-text {
 	color: #ffc107;
 }
 
@@ -51,6 +52,7 @@ p {
 	width: 1000px;
 	height: 560px;
 	background-image: url("../img/background-image.png");
+	position: relative;
 }
 
 .content {
@@ -64,6 +66,8 @@ header {
 	height: 200px;
 }
 
-section {
-	margin: 40px 0 0 0;
+#small-pirate-img {
+	position: absolute;
+	top:35px;
+	right:10px;
 }
