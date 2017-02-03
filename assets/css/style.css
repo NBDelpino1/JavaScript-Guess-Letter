@@ -1,28 +1,16 @@
-
-.container .jumbotron, .container-fluid .jumbotron{
-	background-color: #286090;
-	margin: 15px;
-	border: 2px;
-	padding: 15px;
-	border-style: solid;
-	border-color: black;
-	height: 760px;
-	
-}
-#userGuess,#timesUserWins,#timesUserLooses,#guessesLeft,#guessesUsed{
-	margin: 15px;
-	border: 2px;
-	padding: 15px;
-	border-style: solid;
-	border-color: black;
-	height: 50px;
-	font-size: 20px;
-	background-color: #F3E1DE;	
+h1 {
+	font-family: 'Barrio', cursive;
+	text-align: center;
 }
 
-#timesUserWins{
-	color: #155f15;
+p {
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-align: center;
 }
-#timesUserLooses{
-	color: #b92323;
+
+.wrapper {
+	width:800px;
+	height:600px;
+	margin:auto;
+	border:1px solid black;
 }

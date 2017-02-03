@@ -12,7 +12,7 @@ window.onkeypress = function(event){
     if (usersGuess == randltr){
     	numWins ++;
     	alert("you won the correct letter was:" + randltr);
-    	document.getElementById("timesUserWins").innerHTML = "Win: " + numWins;   	
+    	document.getElementById("numUserWins").innerHTML = "Win: " + numWins;
     	restart();
 
     	
@@ -21,24 +21,24 @@ window.onkeypress = function(event){
 		if (guessLeft == 0) {
 			alert("You lost");
 			numLooses ++;
-			document.getElementById("timesUserLooses").innerHTML = "Loss : " + numLooses;
+			document.getElementById("numUserLosses").innerHTML = "Loss : " + numLooses;
 			restart();
 
 
 		} else {
 			alert("Opps try again");
-			document.getElementById("userGuess").innerHTML = "You guess: " + usersGuess;
+			document.getElementById("usersGuess").innerHTML = "You guess: " + usersGuess;
 			guessLeft --;
-			document.getElementById("guessesLeft").innerHTML = "Guesses left: " + guessLeft;
-			document.getElementById("guessesUsed").innerHTML = "Guesses so far : " + guessUsed.join(" ");
+			document.getElementById("numGuessesRemaining").innerHTML = "Guesses left: " + guessLeft;
+			document.getElementById("numGuessesUsed").innerHTML = "Guesses so far : " + guessUsed.join(" ");
 		}
 	}
 
 } 
 function restart(){
-	document.getElementById("guessesUsed").innerHTML = "Guesses so far : " ;
-	document.getElementById("userGuess").innerHTML = "You guess: " ;
-	document.getElementById("guessesLeft").innerHTML = "Guesses left: 10 " ;
+	document.getElementById("numGuessesUsed").innerHTML = "Guesses so far : " ;
+	document.getElementById("usersGuess").innerHTML = "You guess: " ;
+	document.getElementById("numGuessesRemaining").innerHTML = "Guesses left: 10 " ;
 	randltr = myletter [Math.floor(Math.random ()* myletter.length)];
 	guessUsed = [];
 	guessLeft = 10;
