@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Psychic Game</title>
-    <link href="https://fonts.googleapis.com/css?family=Barrio|Julius+Sans+One|Open+Sans+Condensed:300|Open+Sans:700|Special+Elite" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Caesar+Dressing|Open+Sans|Orbitron:900" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
-    <div class="wrapper">
-        <div class="header">
-            <h1>Guess This</h1>
+<div class="wrapper">
+    <span class="decorative-strip"></span>
+    <div class="content">
+        <header>
+            <h1><span class="accent-color">Guess</span> This</h1>
             <p>A Simple But Fun Javascript Game</p>
-            <p>Where The Player Has Attempts To Guess The Right Letter</p>
+            <p>Player Has Ten Chances To Guess The Right Letter</p>
             <p>Select A Letter Using Your Keyboard!</p>
-        </div>
-        <div class="section">
-            <div id="usersGuess"></div>
-            <div id="numUserWins"></div>
-            <div id="numUserLosses"></div>
-            <div id="numGuessesRemaining"></div>
-            <div id="numGuessesUsed"></div>
-        </div>
+        </header>
+        <section>
+            <h2 id="currentGuess"></h2>
+            <h2 id="numGuessesRemaining"></h2>
+            <h2 id="guessedAlready"></h2>
+        </section>
+        <section>
+            <h2 id="numUserWins"></h2>
+            <h2 id="numUserLosses"></h2>
+        </section>
     </div>
-
-
-
-	<script type="text/javascript" src="assets/js/game.js"></script>
+    <script src="assets/js/game.js" type="text/javascript">
+    </script>
+</div>
 </body>
 </html>
 
+<!-- Built by Nick Delpino -->
