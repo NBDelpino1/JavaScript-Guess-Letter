@@ -2,7 +2,7 @@ var numWins = 0;
 var numLooses = 0;
 var guessLeft = 10;
 var guessUsed = [];
-var myletter = ["D", "E", "L"];
+var myletter = ["D", "E", "L", "P", "I", "N", "O"];
 var randltr = myletter[Math.floor(Math.random() * myletter.length)];
 window.onkeypress = function(event) {
     var usersGuess = String.fromCharCode(event.keyCode).toUpperCase();
@@ -29,11 +29,11 @@ window.onkeypress = function(event) {
     }
 }
 
-function restart() {
-    document.getElementById("guessedAlready").innerHTML = "Guesses so far : ";
-    document.getElementById("currentGuess").innerHTML = "You guess: ";
-    document.getElementById("numGuessesRemaining").innerHTML = "Guesses left: 10 ";
-    randltr = myletter[Math.floor(Math.random() * myletter.length)];
-    guessUsed = [];
-    guessLeft = 10;
-}
+// function restart() {
+//     document.getElementById("guessedAlready").innerHTML = "Guesses so far : ";
+//     document.getElementById("currentGuess").innerHTML = "You guess: ";
+//     document.getElementById("numGuessesRemaining").innerHTML = "Guesses left: 10 ";
+//     randltr = myletter[Math.floor(Math.random() * myletter.length)];
+//     guessUsed = [];
+//     guessLeft = 10;
+// }
